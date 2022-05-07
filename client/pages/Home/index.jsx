@@ -1,13 +1,11 @@
 import React from 'react';
-import '../styles/App.css';
+import '../styles/Home.css';
 
-function App() {
+export default function Home() {
   return (
-    <div className="App">
+    <div className="Home">
       Main app stuff goes here
       {/* Home Landing Page */}
     </div>
   );
 }
-
-export default App;
