@@ -1,3 +1,8 @@
+h4 {
+  margin-bottom: 3px;
+}
+
+
 .Home {
   text-align: center;
 }
@@ -32,13 +37,468 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-button {
-  font-size: calc(10px + 2vmin);
+
+/***********************     Home     ***********************/
+
+.home-search-bar {
+  display: flex;
+  flex-direction: column;
+  width: 60vh;
 }
 
-/***********************     Home    ***********************/
+.home-headline {
+  margin-bottom: 2em;
+}
+
+.home-search-bar input {
+  padding: 10px;
+  text-align: left;
+  border-radius: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.home-search-bar .search {
+  text-align: right;
+  padding: 0;
+  padding-bottom: 20px;
+}
+
+
+.trends {
+  padding: 100px 40px 120px 40px;
+  width: 80vw;
+  margin: auto;
+}
+
+.trends h1{
+  padding-bottom:50px;
+}
+.trends-list {
+  padding: 0 20px;
+  display: flex;
+}
+
+.trends-book {
+  width: 20%;
+  padding: 20px 20px 0 20px;
+}
+
+.trends-book img {
+  width: 100%;
+}
+
+.trends h2 {
+  text-align: center !important;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+  position: relative;
+  padding-top:40px;
+
+}
+
+.trends h2::before{
+  content: '「';
+  position: absolute;
+  margin-left: -40px;
+  margin-top: -8px;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.trends h2::after{
+  content: '」';
+  bottom: -3px;
+  position: absolute;
+  margin-left: 8px;
+  margin-bottom: 0;
+  font-size: 30px;
+}
+
+
+.retroshadow {
+  color: #2c2c2c;
+  letter-spacing: .05em;
+  text-shadow:
+    2px 2px 0px #d5d5d5,
+    3px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+.featured-clubs {
+  display: flex;
+}
+
+.left {
+  width: 40%;
+  background: url('../assets/bookclubs.png') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 700px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left h3 {
+  padding-bottom: 20px;
+}
+
+.right {
+  width: 60%;
+  background: #eeeeee;
+}
+
+.clubs-list {
+  padding: 80px;
+}
+
+
+.surprise {
+  padding: 80px 0;
+  height: 700px;
+  position: relative;
+}
+
+
+
+.card {
+  color: #013243;
+  /*SHERPA BLUE*/
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  width: 300px;
+  height: 400px;
+  background: #e0e1dc;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%) perspective(2000px);
+  box-shadow: inset 300px 0 50px rgba(0, 0, 0, .5), 20px 0 60px rgba(0, 0, 0, .5);
+  transition: 1s;
+}
+
+.card:hover {
+  transform: translate(-50%, -50%) perspective(2000px) rotate(15deg) scale(1.5);
+  box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5), 0 10px 100px rgba(0, 0, 0, .5);
+}
+
+.card:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #BAC1BA;
+  transform-origin: bottom;
+  transform: skewX(-45deg);
+}
+
+.card:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 5px;
+  height: 100%;
+  background: #92A29C;
+  transform-origin: left;
+  transform: skewY(-45deg);
+}
+
+.card .imgBox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-origin: left;
+  transition: .7s;
+}
+
+.card .bark {
+  position: absolute;
+  background: #e0e1dc;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: .7s;
+}
+
+.card .imgBox img {
+  background: black;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card:hover .imgBox {
+  transform: rotateY(-135deg);
+}
+
+.card:hover .bark {
+  opacity: 1;
+  transition: .6s;
+  box-shadow: 300px 200px 100px rgba(0, 0, 0, .4) inset;
+}
+
+.card .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 25px 0 20px 50px;
+  flex-direction: column;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+
+.card .details img{
+  width:200px;
+  height:300px;
+}
+
+.card .details p {
+  font-size: 15px;
+  line-height: 5px;
+  transform: rotate(-10deg);
+  padding: 0 0 0 20px;
+}
+
+.card .details h4 {
+  text-align: center;
+  font-size:16px;
+}
+
+.card .details h5 {
+  text-align: center;
+  font-size:12px;
+  padding-bottom:10px;
+}
+
+
+.text-right {
+  text-align: right;
+}
+
+
+.book {
+  width: 100%;
+  height: 100%;
+  position:relative;
+  text-align: center;
+  margin:2.5%;
+}
+
+.book-cover {
+  position: absolute;
+  z-index:1;
+  width: 100%;
+  height: 100%;
+  transform-origin: 0 50%;
+  -webkit-transform-origin: 0 50%;
+  background: #111;
+  background-size:cover;
+  border-radius: 3px;
+  box-shadow:
+    inset 4px 1px 3px #ffffff60,
+    inset 0 -1px 2px #00000080;
+  transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+}
+
+
+.book .book-cover {
+  background-size: 100% 100%;
+}
+
+
+.effect {
+  width: 20px;
+  height: 100%;
+  margin-left: 10px;
+  border-left: 2px solid #00000010;
+  background-image: linear-gradient(90deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
+  transition: all .5s ease;
+}
+
+.light {
+  width: 90%;
+  height: 100%;
+  position: absolute;
+  border-radius: 3px;
+  background-image: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 100%);
+  top: 0;
+  right:0;
+  opacity: .1;
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+}
+
+.book:hover { cursor:pointer; }
+
+.book:hover .book-cover {
+  transform: perspective(2000px) rotateY(-30deg);
+  -webkit-transform: perspective(2000px) rotateY(-30deg);
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  box-shadow:
+    inset 4px 1px 3px #ffffff60,
+    inset 0 -1px 2px #00000080,
+    10px 0px 10px -5px #00000030
+}
+
+.book:hover .effect {
+  width: 40px;
+}
+
+.book:hover .light {
+  opacity: 1;
+  width: 70%;
+}
+
+.book-inside{
+  width: calc(100% - 2px);
+  height:96%;
+  position:relative;
+  top: 2%;
+  border: 1px solid grey;
+  border-radius:3px;
+  background: white;
+  box-shadow:
+  10px 40px 40px -10px #00000030,
+  inset -2px 0 0 grey,
+  inset -3px 0 0 #dbdbdb,
+  inset -4px 0 0 white,
+  inset -5px 0 0 #dbdbdb,
+  inset -6px 0 0 white,
+  inset -7px 0 0 #dbdbdb,
+  inset -8px 0 0 white,
+  inset -9px 0 0 #dbdbdb;
+}
+
+.book-inside img{
+  opacity: 0;
+}
+
+.trends-book .book .book-cover{
+  background-size:100% 100% !important;
+}
+
+.bookshelf{
+  margin-top: -12px;
+}
+
+.bookshelf img{
+  width:100%
+}
+
+.col-right p{
+  color:black;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+  .trends {
+    width: 100vw;
+  }
+
+}
+
+@media only screen and (max-width: 800px) {
+  .trends {
+    padding:40px 10px;
+  }
+
+  .trends h1{
+    padding-bottom:20px;
+  }
+}
+
+/***********************     About     ***********************/
+
+.profile-container {
+  padding-bottom: 0;
+}
+
+.last-profile-container {
+  padding-bottom: 200px !important;
+}
+
+.profiles-second-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.team-profiles-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.team-profile img {
+  border-radius: 50%;
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+.profile-titles h1 {
+  color: var(--wood);
+}
+
+.profile-info {
+  margin-top: 70px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: transparent;
+  color: transparent;
+}
+
+.flip-card-back {
+  background-color: transparent;
+  color: transparent;
+  transform: rotateY(180deg);
+}
